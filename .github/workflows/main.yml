@@ -1,0 +1,18 @@
+name: Linux Build
+
+on: push
+
+jobs:
+  build:
+    name: Build on Ubuntu
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+      with:
+        ref: 6b9f937475db9280d966f44f469bc80191b5092a
+
+    - name: Build C Code
+      run: |
+        cd src
+        ./paq > ../nuklear.h
