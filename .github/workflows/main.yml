@@ -14,5 +14,6 @@ jobs:
 
     - name: Build C Code
       run: |
-        cd src
-        ./paq.sh > ../nuklear.h
+        make -C demo/glfw_opengl2
+        make -C demo/glfw_opengl3
+        make -C example
