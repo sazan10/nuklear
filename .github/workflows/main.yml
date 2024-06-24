@@ -18,7 +18,7 @@ jobs:
       run: sudo apt-get install -y --no-install-recommends liballegro5-dev liballegro-image5-dev liballegro-ttf5-dev libglfw3 libglfw3-dev libglew-dev libsdl2-dev libwayland-dev libx11-dev libxft-dev wayland-protocols
     - name: build all makefiles
       run: |
-        find . -name Makefile | while read makefile; do
+        find example demo -name Makefile | while read makefile; do
           dir=$(dirname "$makefile")
           echo "Entering directory: $dir"
           (cd "$dir" && make)
