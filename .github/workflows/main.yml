@@ -15,4 +15,4 @@ jobs:
     - name: Build C Code
       run: |
         cd src
-        ./paq > ../nuklear.h
+        ./paq.sh > ../nuklear.h
